@@ -23,7 +23,9 @@ const connectToDatabase = async () => {
 connectToDatabase();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://moduvida-frontend-ndr2.vercel.app'
+}));
 app.use(express.json());
 
 // Middleware para establecer idioma
